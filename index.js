@@ -12,7 +12,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
     case 'get':
       const contact = await contactsOperations.getContactById(id);
       if (!contact) {
-        throw new Error(`Product with id=${id} not found`);
+        throw new Error(`Contact with id=${id} not found`);
       }
       console.log(contact);
       break;
@@ -23,6 +23,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
         email,
         phone
       );
+
       console.log(newContact);
       break;
 
